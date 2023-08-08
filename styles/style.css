@@ -129,16 +129,17 @@ nav .logo {
 }
 
 .hero-content {
-  max-width: 800px;
+  max-width: 1000px;
+  height: 100%;
   margin: 0 auto;
   position: relative;
   z-index: 1;
-  padding: 150px 0;
+  padding: 100px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 6rem;
+  gap: 3rem;
 }
 
 .subtitle {
@@ -148,74 +149,42 @@ nav .logo {
 }	
 
 .cta-button {
+  background: var(--primary-color);
   margin-top: 40px;
 }
 
 .button-86 {
-  all: unset;
-  width: 100px;
-  height: 30px;
-  font-size: 16px;
-  background: transparent;
-  border: none;
-  position: relative;
-  color: var(--white);
-  cursor: pointer;
-  z-index: 1;
-  padding: 15px 30px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  white-space: nowrap;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 0.85em 1.55em 0.85em 1.25em;
+  color: white;
+  background: #ad5389;
+  background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+  letter-spacing: 0.05em;
+  border-radius: 20em;
+  cursor: pointer;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
 }
 
-.button-86::after,
-.button-86::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: -99999;
-  transition: all .4s;
+.button-86 > svg {
+  fill: white;
+  height: 1.4em;
+  width: 1.4em;
+  margin-right: 0.4em;
 }
 
-.button-86::before {
-  transform: translate(0%, 0%);
-  width: 100%;
-  height: 100%;
-  background: var(--secondary-color);
-  border-radius: 10px;
+.button-86:hover {
+  box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
 }
 
-.button-86::after {
-  transform: translate(10px, 10px);
-  width: 35px;
-  height: 35px;
-  background: #ffffff15;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(5px);
-  border-radius: 50px;
-}
-
-.button-86:hover::before {
-  transform: translate(5%, 20%);
-  width: 110%;
-  height: 110%;
-}
-
-.button-86:hover::after {
-  border-radius: 10px;
-  transform: translate(0, 0);
-  width: 100%;
-  height: 100%;
-}
-
-.button-86:active::after {
-  transition: 0s;
-  transform: translate(0, 5%);
+.button-88:active {
+  box-shadow: 0 0.3em 1em -0.5em #14a73e98;
 }
 
 /* Estilos para a seção Sobre Nós */
@@ -244,18 +213,30 @@ nav .logo {
 
 /* Estilos para a seção Nossos Serviços */
 .services {
-  padding: 100px 0;
+  padding: 50px 0;
   text-align: center;
+}
+
+.services > .container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-top: 40px;
 }
 
 .service {
   display: inline-block;
   margin: 0 20px;
+  box-shadow: 0px 18px 58px 16px #0000000F;
+  border-radius: 10px;
 }
 
 .service-card {
   background-color: #fff;
-  padding: 20px;
+  height: 300px;
+  width: 350px;
+  padding: 40px;
   border-radius: 10px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -280,7 +261,10 @@ nav .logo {
 
 /* Estilos para a seção Benefícios */
 .benefits {
-  background-color: #f7f7f7;
+  background: #f7f7f7;
+  background-image: url('../assets/Patterns.png');
+  background-repeat: no-repeat;
+  background-position: center;
   padding: 80px 0;
   text-align: center;
 }
@@ -288,6 +272,8 @@ nav .logo {
 .benefit-list {
   list-style: none;
   padding: 0;
+  display: flex;
+  margin-top: 40px;
 }
 
 .benefit-list li {
@@ -351,8 +337,12 @@ nav .logo {
   border-radius: 5px;
 }
 
+.contact-form textarea::placeholder {
+  font-family: 'Roboto', sans-serif;
+}
+
 .contact-form button {
-  background-color: #ff5500;
+  background-color: var(--primary-color);
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -405,4 +395,127 @@ footer {
   0% { opacity: 0; }
   10% { transform: translateY(0); opacity: 1; }
   100% { transform: translateY(15px); opacity: 0;}
+}
+
+/* carrosel */
+#loader {
+	height: 15em;
+	width: 15em;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	display: -ms-grid;
+	display: grid;
+	place-items: center;
+	border-radius: 5px;
+}
+#loader:after {
+	content: "";
+	height: 11em;
+	width: 11em;
+	border: 0.9em solid #a0a0a0;
+	border-top-color: #4249ed;
+	border-radius: 50%;
+	-webkit-animation: spin 1s linear infinite;
+	animation: spin 1s linear infinite;
+}
+@-webkit-keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+@keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+#box {
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	width: 80vw;
+	max-width: 41em;
+	min-height: 26em;
+	display: contents;
+}
+.img-con {
+  position: absolute;
+}
+.img-con img {
+	height: 1px;
+	width: 1px;
+}
+.wrapper {
+	background-color: #ffffff;
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	border-radius: 0.6em;
+	-webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+.testimonial-container {
+	width: 85%;
+	height: 100%;
+	position: relative;
+	margin: auto;
+	padding: 1.8em 1.2em;
+}
+.testimonial-container p {
+	color: #8c8c90;
+	text-align: center;
+	font-size: 0.9em;
+	line-height: 2em;
+	letter-spacing: 0.05em;
+}
+.testimonial-container img {
+	display: block;
+	margin: 1.8em auto 1.25em auto;
+	border-radius: 50%;
+	width: 4.4em;
+}
+.testimonial-container h3 {
+	color: #2d3d67;
+	font-size: 1em;
+	text-align: center;
+}
+.testimonial-container h6 {
+	color: #bcc4da;
+	font-size: 0.9em;
+	letter-spacing: 0.03em;
+	font-weight: 400;
+	text-align: center;
+}
+.wrapper button {
+	font-size: 1.8em;
+	color: #0a69ed;
+	height: 2.2em;
+	width: 2.2em;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	background-color: #ffffff;
+	border: none;
+	border-radius: 50%;
+	-webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+}
+button#next {
+	right: -1.1em;
+}
+button#prev {
+	left: -1.1em;
+}
+.fab {
+	color: #ff0000;
+}
+@media screen and (max-width: 650px) {
+	.wrapper {
+		font-size: 14px;
+	}
 }
