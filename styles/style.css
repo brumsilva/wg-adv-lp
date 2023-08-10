@@ -1074,6 +1074,10 @@ button#prev {
     margin-bottom: 3rem;
   }
 
+  .socio-foto {
+    width: 70%;
+  }
+
   .socio-descricao {
     width: 80%;
   }
