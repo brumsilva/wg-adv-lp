@@ -101,13 +101,8 @@ header nav {
   align-items: center; 
   gap: 210px; 
 }
-nav .logo {
-  font-size: 30px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #fff;
-  text-decoration: none;
+nav .logo > a > img {
+  max-width: 100px;
 }
 
 .nav-links {
@@ -339,7 +334,7 @@ nav .logo {
   background-image: url('../assets/Patterns.png');
   background-repeat: no-repeat;
   background-position: center;
-  padding: 80px 0;
+  padding: 40px 0;
   text-align: center;
 }
 
@@ -382,17 +377,51 @@ nav .logo {
 
 /* Estilos para a seção Casos de Sucesso */
 .success-cases {
-  padding: 100px 0;
+  padding: 60px 0;
   text-align: center;
 }
 
-.case {
-  margin-bottom: 40px;
+.socio-card {
+  display: flex;
+  width: 100%;
+  margin: 20px 0;
+  justify-content: center;
+  gap: 60px;
+}
+
+.socio-foto {
+  max-width: 360px;
+  width: 50%
+}
+
+.socio-foto img {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+}
+
+.socio-descricao {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.socio-descricao > h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.socio-descricao > p {
+  font-size: 16px;
+  color: #777;
+  text-align: justify;
 }
 
 /* Estilos para a seção Entre em Contato */
 .contact {
-  background-color: #333;
+  background-color: var(--primary-color);
   color: #fff;
   padding: 100px 0;
   text-align: center;
@@ -429,9 +458,32 @@ nav .logo {
   margin-top: 30px;
 }
 
+/* Estilos para o testimonial */
+.testimonial-full {
+  background-color: var(--primary-color);
+  display: flex;
+}
+
+.testimonial-full-container > h2 > span {
+  color: #fff;
+}
+
+.testimonial-full-container {
+  padding: 40px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  background-image: url('../assets/Patterns.png');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
 /* Estilos para o rodapé */
 footer {
-  background-color: #333;
+  background-color: var(--primary-color);
   color: #fff;
   text-align: center;
   padding: 20px 0;
