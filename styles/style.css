@@ -72,6 +72,12 @@ body {
   }
 }
 
+p {
+  letter-spacing: 0.5px;
+  line-height: 1.8;
+  font-size: 1.4rem;
+}
+
 /*estilos gerais*/
 h1 {
   font-size: 5rem;
@@ -1042,6 +1048,10 @@ button#prev {
     display: none;
   }
 
+  .hero-content {
+    padding: 20px 20px;
+  }
+
   .benefit-list {
     flex-direction: column;
   }
@@ -1075,7 +1085,7 @@ button#prev {
   }
 
   .socio-foto {
-    width: 70%;
+    width: 70%; 
   }
 
   .socio-descricao {
